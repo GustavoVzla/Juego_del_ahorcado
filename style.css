@@ -1,0 +1,355 @@
+/* establece que todas las etiquetas HTML deben tener un margen y un relleno de 0 y que la caja debe tener un border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Se establece que el fondo de la página debe ser una imagen de fondo y que debe cubrir todo el ancho y alto de la pantalla. Además, se establece que el contenido debe estar centrado verticalmente y que los elementos deben estar alineados en el centro */
+body {
+  background-image: url(img/fondocarlos1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 95vh;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  padding: 5px;
+}
+
+/* Se establece que el encabezado debe estar centrado horizontalmente y verticalmente */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Se establece que el tamaño de fuente del título del juego debe ser de 1.5rem y que debe tener un margen superior de 20px */
+header h1 {
+  font-size: 1.5rem;
+  color: #eeebf5;
+  margin-top: 20px;
+  font-family: "Nosifer", cursive;
+  font-weight: lighter;
+}
+
+/* Se establece que todo el contenido principal debe estar centrado verticalmente y horizontalmente */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Se establece que el tamaño de fuente del h2 del juego debe ser de 2.5rem y que debe tener un margen inferior de 10px */
+main h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 10px;
+  color: #ece8ec;
+  text-shadow: 5px 5px 5px rgb(12, 1, 1);
+}
+
+/* Se establece que los elementos dentro del div deben estar en una columna */
+main div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Se establece que el tamaño de fuente del texto dentro del label debe ser de 2rem y que debe tener un margen inferior de 20px */
+main label {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #eeedf1;
+  text-shadow: 5px 5px 5px rgb(14, 13, 13);
+  margin-bottom: 20px;
+}
+
+/* Se establece que el tamaño de fuente del input debe ser de 4rem y que debe tener un ancho y alto de 5rem. Además, establece que el borde debe tener un radio de 5px y un color negro. También establece que el color de fondo debe ser una sombra azul claro */
+main input {
+  font-size: 4rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgba(105, 185, 207, 0.596);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Se establece que los botones deben tener un ancho de 5rem, una altura de 2rem, un radio de borde de 5px y un color azul claro. Además, establece que los botones no deben tener borde y deben tener texto blanco */
+main button {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(105, 185, 207, 0.596);
+  color: aliceblue;
+  border: 1px solid rgb(8, 8, 8);
+}
+
+/* Se establece que cuando se pasa el cursor sobre los botones, deben cambiar su color a una sombra azul más oscura */
+main button:hover {
+  cursor: pointer;
+  background-color: rgba(105, 185, 207, 0.796);
+}
+
+/* Se establece que cuando se pasa el cursor sobre la clase sonido, se cambia a un cursor con forma de mano */
+.sonido:hover {
+  cursor: pointer;
+}
+
+/* Se establece que los elementos dentro del section deben estar separados por un espacio horizontal entre ellos y centrados horizontalmente en la página */
+section {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+/* Se establece que las clases win_oculta y lose-oculta deben tener una propiedad de visualización de “none”, lo que significa que los elementos no se muestran */
+.win_oculta {
+  display: none;
+}
+
+.lose-oculta {
+  display: none;
+}
+
+/* Se establece que los siguientes contenedores deben tener una posición fija y cubrir toda la pantalla. Además, se establece que el fondo de los contenedores deben ser un color azul claro semitransparente y que los elementos dentro de los contenedores deben estar centrados verticalmente y horizontalmente */
+.container-win {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(105, 185, 207, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-lose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(105, 185, 207, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Se establece que el modal debe tener un alto del 40% y un ancho del 90%. Además, se establece que el relleno debe ser del 5%, el texto debe estar centrado y el fondo debe ser un color gris claro semitransparente. También establece que los elementos dentro del modal deben estar centrados verticalmente y horizontalmente */
+.modal-WinInicio,
+.modal-LoseInicio {
+  height: 40%;
+  width: 90%;
+  padding: 5%;
+  text-align: center;
+  background-color: rgba(217, 229, 233, 0.9);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .modal-LoseInicio {
+  height: 40%;
+  width: 90%;
+  padding: 5%;
+  text-align: center;
+  background-color: rgba(217, 229, 233, 0.9);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Se establece que el aside debe tener un borde sólido de 1px de ancho y un radio de borde de 10px. Además, establece que el relleno debe ser de 2px y los elementos dentro del aside deben estar centrados verticalmente y horizontalmente. También establece que la opacidad del aside debe ser del 80% */
+aside {
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+/* Se establece que el tamaño de fuente del subtítulo dentro del aside debe ser de 1.5rem y que el color del texto debe ser blanco */
+aside h2 {
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+/* Se establece que el pie de página debe estar en la parte inferior de la página y tener un margen superior automático y un margen inferior de 30px. Además, establece que el texto dentro del pie de página debe estar centrado horizontalmente */
+footer {
+  margin-top: auto;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Se establece que el tamaño de fuente del título dentro del pie de página debe ser de 2rem y que el color del texto debe ser rojo oscuro semitransparente. También establece que el texto debe tener una sombra para mejorar la legibilidad */
+footer h3 {
+  font-family: "Nosifer", cursive;
+  font-size: 2rem;
+  color: rgba(231, 16, 9, 0.75);
+  text-shadow: 5px 5px 5px rgb(14, 13, 13);
+  font-weight: lighter;
+  text-align: center;
+}
+
+/* Se establece que la imagen dentro del modal debe tener un ancho de 70px y un margen superior e inferior de 10px y 5px respectivamente */
+#modal_img {
+  width: 70px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#img_lose {
+  width: 70px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Se establece que el botón para reiniciar el juego debe tener un ancho del 50%, una altura de 30px y un radio de borde de 10px. Además, establece que no debe tener borde y su color de fondo debe ser azul oscuro con texto blanco */
+#restart {
+  width: 50%;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  margin-top: auto;
+  background-color: rgb(96, 96, 218);
+  color: aliceblue;
+}
+
+/* Se establece que el modal debe tener una propiedad de visualización de “none”, lo que significa que el elemento no se muestra. Además, establece que el modal debe tener una posición fija y cubrir toda la pantalla. También establece que el fondo del modal debe ser un color negro semitransparente */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Se establece que el contenido del modal debe tener un fondo gris oscuro semitransparente y un margen del 10% en la parte superior e inferior y centrado horizontalmente. Además, establece que el contenido del modal debe tener un sombreado blanco y un ancho del 80% con un ancho máximo de 600px. También establece que los elementos dentro del contenido del modal deben estar centrados verticalmente y horizontalmente */
+.modal-content {
+  background-color: rgba(19, 9, 9, 0.8);
+  margin: 10% auto;
+  padding: 20px;
+  box-shadow: 0 0 10px white;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Se establece que el contenido del modal debe tener un fondo gris oscuro semitransparente y un margen del 10% en la parte superior e inferior y centrado horizontalmente. Además, establece que el contenido del modal debe tener un sombreado blanco y un ancho del 80% con un ancho máximo de 600px. También establece que los elementos dentro del contenido del modal deben estar centrados verticalmente y horizontalmente */
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Nosifer", cursive;
+  font-weight: lighter;
+}
+
+/* Se establece que el tamaño de fuente del párrafo dentro del contenido del modal debe ser de 24px y que el margen inferior debe ser de 20px. Además, establece que el color del texto debe ser blanco */
+.modal-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
+/* Se establece que los botones deben estar en una fila y centrados horizontalmente con un espacio entre ellos de 10px */
+.botones_bienvenida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Se establece que los botones deben tener un ancho de 5rem y una altura de 2rem con un radio de borde de 5px y sin borde. Además, establece que el color de fondo debe ser rojo oscuro semitransparente con texto blanco y un sombreado blanco suave. También establece que los botones deben tener un margen superior de 10px */
+.botones_level {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(241, 25, 9, 0.5);
+  color: aliceblue;
+  margin-top: 10px;
+  box-shadow: 0 0 5px white;
+}
+
+.botones_level:hover {
+  background-color: rgba(241, 25, 9, 0.7);
+}
+
+/* Se establece que la imagen del árbol debe tener un ancho y alto de 600px y estar en la parte inferior absoluta de la página */
+#img_arbol {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Se establece que el tamaño de fuente del subtítulo dentro del contenido del modal debe ser de 1.5rem y que el color del texto debe ser blanco */
+#modal_h3 {
+  color: aliceblue;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+/* Se establece que la imagen de fondo debe tener una posición absoluta en la parte inferior con un ancho máximo de 600px y una altura máxima igual a la altura visible actual */
+.arbol {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Se establece que el color del texto dentro del pie de página debe ser blanco con una sombra para mejorar la legibilidad */
+footer p {
+  color: #eeebf5;
+  text-shadow: 5px 5px 5px black;
+  padding: 1rem;
+}
+
+/* Se establece que el botón para activar/desactivar el sonido debe tener un ancho y alto de 25px y estar en la parte superior derecha absoluta con una imagen correspondiente */
+.sonido {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  background-image: url(img/Sound.png);
+  background-size: cover;
+}

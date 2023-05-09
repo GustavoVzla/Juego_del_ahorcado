@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nosifer:400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="soga.ico" />
+  </head>
+
+  <body>
+    <div class="arbol"></div>
+    <header>
+      <h1 id="titulo">¡Cuidado con tu cuello!</h1>
+    </header>
+
+    <main>
+      <h2 id="palabraSecreta"></h2>
+      <label for="letra">Introduce una letra:</label>
+      <section>
+        <aside>
+          <h2 id="puntaje">Puntaje:0</h2>
+          <h2 id="record">Record:</h2>
+        </aside>
+        <div>
+          <input id="letra" type="text" maxlength="1" autocomplete="off" />
+          <button id="comprobar">Comprobar</button>
+        </div>
+      </section>
+
+      <div id="modal-bienvenida" class="modal">
+        <div class="modal-content">
+          <h2 id="modal_h2">Bienvenido</h2>
+          <img src="#" id="modal_img" alt="" />
+          <h3 id="modal_h3"></h3>
+          <p id="modal_p">Selecciona la dificultad para jugar.</p>
+          <div class="botones_bienvenida">
+            <button id="easy" class="botones_level easy">EASY</button>
+            <button id="normal" class="botones_level">NORMAL</button>
+            <button id="hard" class="botones_level">HARD</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="sonido"></div>
+
+    <footer>
+      <h3 id="arrayError"></h3>
+      <p>© 2023 Carlos, Gustavo, Giancarlo y Martin.</p>
+    </footer>
+
+    <audio src="audio/dramatic.mp3" id="audio_fondo" loop></audio>
+    <audio src="audio/kill.mp3" id="audio_win"></audio>
+    <audio src="audio/evil.mp3" id="audio_lose"></audio>
+    <audio src="audio/victory.mp3" id="audio_victory"></audio>
+    <audio src="audio/loser.mp3" id="audio_loser"></audio>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
