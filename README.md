@@ -12,7 +12,7 @@ Hangman game in the browser, written in vanilla JavaScript (ES modules), HTML an
 
 - `index.html`, `style.css`: layout and styles
 - `main.js`: game flow and DOM handling
-- `resolucionPartidas.js`: round resolution logic
+- `resolucionPartidas.js`: win/lose handling (modal windows and sounds)
 - `word.js`: word lists and random word generation
 
 ## Run
